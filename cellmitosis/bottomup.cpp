@@ -9,7 +9,7 @@ int cell(int n,int x,int y,int z){
 	dp[i]=min(dp[i/2]+x,dp[i-1]+y);
 	}
 	else{
-	dp[i]=min(dp[i-1]+y,dp[(i+x)/2]+x+z);
+	dp[i]=min(dp[i-1]+y,dp[(i+1)/2]+x+z);
 	}
 	}
 	return dp[n];
