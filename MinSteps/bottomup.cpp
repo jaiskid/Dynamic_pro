@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int MinStep(int n){
-	int dp[1000]={0};
+	int dp[20000001]={0};
 	
 	for(int i=2;i<=n;i++){
 		int op1,op2,op3;
