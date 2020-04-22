@@ -22,15 +22,17 @@ int palindromic(string s, int i, int j) {
 	if (t[i][j] != -1)
 		return t[i][j];
 	int res = INT_MAX;
+	int left;
+	int right;
 	for (int k = i; k <= j - 1; k++) {
 		if (t[i][k] != -1) {
-			int left = t[i][k];
+			left = t[i][k];
 		} else {
 			left = palindromic(s, i, k);
 			t[i][k] = left;
 		}
 		if (t[k + 1][j] != -1) {
-			int right = t[k + 1][j];
+			right = t[k + 1][j];
 		} else {
 			right = palindromic(s, k + 1, j);
 			t[k + 1][j] = right;
