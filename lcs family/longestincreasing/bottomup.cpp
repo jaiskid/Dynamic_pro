@@ -1,17 +1,32 @@
 #include<bits/stdc++.h>
 using namespace std;
-int lis(int *arr, int n) {
-	int dp[n + 1];
-	for (int i = 0; i < n + 1; i++) {
-		dp[i] = 1;
-	}
-	for (int i = 1; i < n; i++) {
-		for (int j = 0; j < i; j++) {
-			if (arr[i] > arr[j] and dp[i] < dp[j] + 1)
-				dp[i] = dp[j] + 1;
-		}
-	}
-	return *max_element(dp, dp + n);
+#include <iostream>
+using namespace std;
+
+
+
+int lengthOfLIS(int *arr, int n) {
+        if(n==0) {
+            return 0;
+        }
+        int *dp = new int[n];
+        for(int i=0;i<n;i++) {
+            dp[i] = 1;
+        }
+        for(int i=1;i<n;i++) {
+            for(int j=0;j<i;j++) {
+                if(arr[j]<arr[i]) {
+                    dp[i] = max(dp[i], 1+dp[j]);
+                }
+            }
+        }
+        int result = 0;
+        for(int i=0;i<n;i++) {
+            if(dp[i] > result) {
+                result = dp[i];
+            }
+        }
+        return result;
 }
 int main() {
 

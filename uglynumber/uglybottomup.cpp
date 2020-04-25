@@ -31,3 +31,4 @@ int main() {
 	cin >> n;
 	cout << get_nth_ugly(n);
 }
+

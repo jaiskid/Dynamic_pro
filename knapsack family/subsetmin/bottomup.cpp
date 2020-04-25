@@ -6,10 +6,11 @@ int subset(int *arr, int range, int n) {
 		for (int j = 0; j < range + 1; j++) {
 			if (i == 0)
 				t[i][j] = false;
-			if (j == 0)
+			else if (j == 0)
 				t[i][j] = true;
 		}
 	}
+	t[0][0]=true;
 	for (int i = 1; i < n + 1; i++) {
 		for (int j = 1; j < range + 1; j++) {
 			if (arr[i - 1] <= j)

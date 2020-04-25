@@ -27,6 +27,7 @@ int lis(int *arr, int n) {
 	}
 	return len;
 }
+
 int main() {
 	int n;
 	cin >> n;

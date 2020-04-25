@@ -16,4 +16,8 @@ int main() {
 	int n;
 	cin >> n;
 	cout << catalanDp(n);
+
 }
+
+
+
