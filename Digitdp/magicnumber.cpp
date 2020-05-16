@@ -50,12 +50,12 @@ int main() {
 
 	ll mo = 0;
 	bool flag = true;
-	for (ll i = 0; i < a.length(); i++) {
-		if (i % 2 == 0 && (a[i] - '0') != d) { // if i%2 == 0, that means position is odd, thus it should not have d
+	for (ll i = 1; i < a.length(); i++) {
+		if (i % 2 == 1 && (a[i-1] - '0') == d) { // if i%2 == 0, that means position is odd, thus it should not have d
 			flag = false;
 			break;
 		}
-		if (i % 2 && (a[i] - '0') == d ) {
+		if ((i % 2)==0 && (a[i] - '0') != d ) {
 			flag = false;
 			break;
 		}
