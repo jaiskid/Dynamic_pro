@@ -1,3 +1,4 @@
+//Time O(m*n) 
 #include<bits/stdc++.h>
 using namespace std;
 int lcs(string x, string y, int m, int n) {
